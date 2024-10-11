@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            padding-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+        }
+        .header h1::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #ffd700;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .header .social-buttons {
+            margin-left: auto;
+        }
+        .header .social-button {
+            color: #fff;
+            font-size: 2em;
+            text-decoration: none;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+        .header .social-button:hover {
+            color: #ffd700;
+        }
+        .header .happy-face {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #fff;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 5px;
+        }
+        .item-list {
+            list-style: none;
+            padding: 0;
+            border: 2px solid #ffd700;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .item {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+        .item:last-child {
+            margin-bottom: 0;
+        }
+        .item-text {
+            flex: 1;
+        }
+        .copy-button {
+            padding: 5px 8px;
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .copy-button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            <span class="happy-face">🇧🇷</span> Vitinixh
+        </h1>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/vitinixh" class="social-button" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@vitinixh" class="social-button" target="_blank" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </div>
+    <h2>Códigos dos meus mapas</h2>
+    <ul class="item-list">
+        <li class="item">
+            <span class="item-text">Mapa de 2V2</span>
+            <button class="copy-button" onclick="copyText('#FREEFIRE73E90FB43F951273115F95A3D4A7B96E6202')">Copiar</button>
+        </li>
+        <li class="item">
+            <span class="item-text">Mapa solo </span>
+            <button class="copy-button" onclick="copyText('#FREEFIREC72FD21D89E12F64699AB949C362E62B6202')">Copiar</button>
+        </li>
+        <li class="item">
+            <span class="item-text">Vazio 1</span>
+            <button class="copy-button" onclick="copyText('Vazio 1')">Copiar</button>
+        </li>
+        <li class="item">
+            <span class="item-text">Vazio 2</span>
+            <button class="copy-button" onclick="copyText('Vazio 2')">Copiar</button>
+        </li>
+        <li class="item">
+            <span class="item-text">Vazio 3</span>
+            <button class="copy-button" onclick="copyText('Vazio 3')">Copiar</button>
+        </li>
+        <li class="item">
+            <span class="item-text">Vazio 4</span>
+            <button class="copy-button" onclick="copyText('Vazio 4')">Copiar</button>
+        </li>
+        <li class="item">
+            <span class="item-text">Vazio 5</span>
+            <button class="copy-button" onclick="copyText('Vazio 5')">Copiar</button>
+    </ul>
+
+    <script>
+        function copyText(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Texto copiado: ' + text);
+        }
+    </script>
+</body>
+</html>
